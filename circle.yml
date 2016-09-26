@@ -1,0 +1,12 @@
+general:
+  build_dir: app
+
+machine:
+  services:
+      - docker
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - cd ../ && ./deploy.sh $CIRCLE_BUILD_NUM

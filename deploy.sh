@@ -15,4 +15,5 @@ docker build -t ottawa-docker:latest app
 docker tag ottawa-docker:latest 221122073016.dkr.ecr.us-east-1.amazonaws.com/ottawa-docker:$TAG
 docker push 221122073016.dkr.ecr.us-east-1.amazonaws.com/ottawa-docker:$TAG
 
-./ecs-deploy.sh -c docker-meetup -n api --max-definitions 1 -i 221122073016.dkr.ecr.us-east-1.amazonaws.com/ottawa-docker:$TAG -v -t 120
+# ECS Deploy from https://github.com/silinternational/ecs-deploy
+./ecs-deploy.sh -c docker-meetup -n api --max-definitions 1 -i 221122073016.dkr.ecr.us-east-1.amazonaws.com/ottawa-docker:$TAG -t 120

@@ -1,4 +1,3 @@
-# https://github.com/mhart/alpine-node
 FROM mhart/alpine-node:6.5.0
 
 RUN apk add --no-cache make gcc g++ python
