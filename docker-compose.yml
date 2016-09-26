@@ -1,0 +1,20 @@
+version: "2"
+
+services:
+  worker:
+    build:
+      context: ./app
+    environment:
+      - ENV=worker
+      - DB_CONNECTION_STRING=mongo://server
+    ports:
+     - 4000:3000
+
+  server:
+    build:
+      context: ./app
+    environment:
+      - ENV=api
+      - DB_CONNECTION_STRING=mongo://server
+    ports:
+     - 3000:3000
