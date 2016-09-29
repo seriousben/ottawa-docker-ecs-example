@@ -1,0 +1,7 @@
+aws ecr get-login --region us-east-1
+
+docker build -t ottawa-docker .
+
+docker tag ottawa-docker:latest 221122073016.dkr.ecr.us-east-1.amazonaws.com/ottawa-docker:0.1.0
+
+docker push 221122073016.dkr.ecr.us-east-1.amazonaws.com/ottawa-docker:0.1.0

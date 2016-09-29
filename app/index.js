@@ -4,7 +4,7 @@ const app = express();
 const environment = process.env.ENV;
 
 app.get('/', (req, res) => {
-  res.send(`Hello world, ${environment}`);
+  res.send(`Hello Docker Ottawa, ${environment}`);
 });
 
 app.listen(3000, () => {
